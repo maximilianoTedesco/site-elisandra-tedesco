@@ -324,29 +324,3 @@ p {
     width: 100%;
   }
 }
-
-@media (max-width: 480px) {
-  .section-bg {
-    padding: 70px 16px;
-  }
-
-  .hero {
-    padding: 82px 14px 28px;
-  }
-
-  .glass {
-    padding: 26px 20px;
-    border-radius: 24px;
-  }
-
-  .tag,
-  .section-label {
-    font-size: 0.72rem;
-    line-height: 1.35;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-}
- 
