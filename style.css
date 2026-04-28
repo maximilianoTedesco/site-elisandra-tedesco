@@ -43,24 +43,24 @@ body {
 }
 
 .bg-1 {
-  background-image: url("fundo-1.jpg");
+  background-image: url("img/fundo-1.jpg");
   background-position: 88% center;
 }
 
 .bg-2 {
-  background-image: url("fundo-2.jpg");
+  background-image: url("img/fundo-2.jpg");
 }
 
 .bg-3 {
-  background-image: url("fundo-3.jpg");
+  background-image: url("img/fundo-3.jpg");
 }
 
 .bg-4 {
-  background-image: url("fundo-4.jpg");
+  background-image: url("img/fundo-4.jpg");
 }
 
 .bg-5 {
-  background-image: url("fundo-5.jpg");
+  background-image: url("img/fundo-5.jpg");
 }
 
 .hero {
