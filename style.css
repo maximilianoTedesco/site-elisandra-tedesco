@@ -26,8 +26,8 @@ body {
   background-attachment: fixed;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 80px 20px;
+  justify-content: flex-start;
+  padding: 80px 7vw;
   position: relative;
 }
 
@@ -41,7 +41,11 @@ body {
   z-index: 1;
 }
 
-.bg-1 { background-image: url("img/fundo-1.jpg"); }
+.bg-1 {
+  background-image: url("img/fundo-1.jpg");
+  background-position: center right;
+}
+
 .bg-2 { background-image: url("img/fundo-2.jpg"); }
 .bg-3 { background-image: url("img/fundo-3.jpg"); }
 .bg-4 { background-image: url("img/fundo-4.jpg"); }
@@ -59,10 +63,29 @@ body {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease;
+}
+
+.glass.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero-card {
-  max-width: 860px;
+  max-width: 720px;
+  margin-left: 0;
+  margin-right: auto;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.16),
+    rgba(255, 255, 255, 0.08)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
 }
 
 .tag {
@@ -77,7 +100,7 @@ body {
 }
 
 h1 {
-  font-size: clamp(2.8rem, 7vw, 6rem);
+  font-size: clamp(2.6rem, 5.8vw, 5rem);
   line-height: 0.95;
   margin-bottom: 22px;
 }
@@ -164,12 +187,26 @@ p {
 @media (max-width: 768px) {
   .section-bg {
     background-attachment: scroll;
+    justify-content: center;
     padding: 60px 16px;
+    background-position: center top;
+  }
+
+  .bg-1 {
+    background-position: 68% center;
   }
 
   .glass {
     padding: 30px 22px;
     border-radius: 22px;
+  }
+
+  .hero-card {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 14vw, 4rem);
   }
 
   .grid {
@@ -183,15 +220,4 @@ p {
   .btn {
     width: 100%;
   }
-
-  .glass {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.8s ease;
 }
-
- .glass.show {
-   opacity: 1;
-   transform: translateY(0);
-}
-
