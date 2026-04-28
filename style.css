@@ -232,34 +232,52 @@ p {
   margin-right: auto;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   .section-bg {
+    min-height: auto;
+    padding: 72px 16px;
     background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
   }
 
   .hero {
     min-height: 100svh;
+    padding: 90px 14px 28px;
     align-items: flex-end;
     justify-content: center;
-    padding: 90px 18px 36px;
+  }
+
+  .bg-1 {
+    background-position: 58% center;
   }
 
   .hero::before {
     background:
       linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.12) 0%,
-        rgba(0, 0, 0, 0.36) 38%,
-        rgba(0, 0, 0, 0.92) 100%
+        rgba(0, 0, 0, 0.10) 0%,
+        rgba(0, 0, 0, 0.38) 38%,
+        rgba(0, 0, 0, 0.94) 100%
       );
-  }
-
-  .bg-1 {
-    background-position: 62% center;
   }
 
   .hero-content {
     width: 100%;
+  }
+
+  .glass {
+    width: 100%;
+    padding: 24px 18px;
+    border-radius: 22px;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
   }
 
   .hero-card {
@@ -269,15 +287,33 @@ p {
 
   h1 {
     max-width: 100%;
-    font-size: clamp(2.8rem, 13vw, 4.1rem);
+    font-size: clamp(2.5rem, 14vw, 4rem);
+    line-height: 0.95;
+    letter-spacing: -0.045em;
   }
 
-  .hero-text {
-    max-width: 100%;
+  h2 {
+    font-size: clamp(2rem, 11vw, 3.2rem);
+    line-height: 1;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .tag,
+  .section-label {
+    font-size: 0.72rem;
+    line-height: 1.35;
   }
 
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .mini-card {
+    min-height: auto;
   }
 
   .hero-buttons {
