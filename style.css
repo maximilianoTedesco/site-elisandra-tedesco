@@ -47,20 +47,12 @@ body {
   background-position: 88% center;
 }
 
-.bg-2 {
-  background-image: url("img/fundo-2.jpg");
-}
-
-.bg-3 {
-  background-image: url("img/fundo-3.jpg");
-}
-
-.bg-4 {
-  background-image: url("img/fundo-4.jpg");
-}
-
+.bg-2,
+.bg-3,
+.bg-4,
 .bg-5 {
-  background-image: url("img/fundo-5.jpg");
+  background-image: url("img/fundo-2.jpg");
+  background-position: center;
 }
 
 .hero {
