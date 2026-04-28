@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elisandra Tedesco | Gestão de Equipes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="site">
+
+    <section class="hero section-bg bg-1">
+      <div class="glass hero-card">
+        <span class="tag">Gestão de Equipes • Liderança • Operações</span>
+        <h1>Elisandra Tedesco</h1>
+        <p>
+          Liderança humana, organização operacional e desenvolvimento de equipes
+          para ambientes que exigem excelência, ritmo e resultado.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#sobre" class="btn">Conhecer trajetória</a>
+          <a href="https://wa.me/55SEUNUMEROAQUI" target="_blank" class="btn btn-whatsapp">
+            Falar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section section-bg bg-2">
+      <div class="glass content-card">
+        <h2>Sobre</h2>
+        <p>
+          Profissional com sólida experiência em gestão operacional, liderança de equipes
+          e desenvolvimento de pessoas. Ao longo da trajetória, construiu uma visão prática
+          sobre organização, atendimento, rotina de operação e tomada de decisão em ambientes
+          dinâmicos.
+        </p>
+        <p>
+          Sua atuação é voltada para formar equipes mais preparadas, responsáveis e alinhadas
+          com os objetivos do negócio.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-bg bg-3">
+      <div class="glass content-card">
+        <h2>Cursos e Formação</h2>
+
+        <div class="grid">
+          <div class="mini-card">
+            <h3>Faculdade / Formação</h3>
+            <p>Adicione aqui a faculdade, curso superior ou formação principal.</p>
+          </div>
+
+          <div class="mini-card">
+            <h3>Cursos Profissionais</h3>
+            <p>Adicione cursos ligados à liderança, gestão, atendimento, operações ou pessoas.</p>
+          </div>
+
+          <div class="mini-card">
+            <h3>Desenvolvimento Contínuo</h3>
+            <p>Espaço para treinamentos, workshops, certificações e experiências relevantes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-bg bg-4">
+      <div class="glass content-card">
+        <h2>Vida pessoal e trajetória no Brasil</h2>
+        <p>
+          Uma trajetória marcada por desafios, trabalho, adaptação e crescimento.
+          A vivência no Brasil fortaleceu valores como responsabilidade, resiliência,
+          empatia e capacidade de lidar com diferentes perfis de pessoas.
+        </p>
+        <p>
+          Essa experiência pessoal se conecta diretamente com sua forma de liderar:
+          com firmeza, escuta, presença e compromisso com o desenvolvimento das equipes.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-bg bg-5 contato">
+      <div class="glass content-card center">
+        <h2>Vamos conversar?</h2>
+        <p>
+          Entre em contato para falar sobre gestão de equipes, liderança operacional,
+          desenvolvimento de pessoas ou oportunidades profissionais.
+        </p>
+
+        <a href="https://wa.me/55SEUNUMEROAQUI" target="_blank" class="btn btn-whatsapp big">
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
