@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   atualizarContador();
 });
 
-const SUPABASE_URL = "COLE_AQUI_SUA_URL";
-const SUPABASE_KEY = "COLE_AQUI_SUA_KEY";
+const SUPABASE_URL = "https://ifwhsngotivshkzzmflu.supabase.co";
+const SUPABASE_KEY = "sb_publishable_-A-NxajIZ2IfxSD7jfzEtg_ieL3y87Q";
 
 async function atualizarContador() {
   const contador = document.getElementById("viewCounter");
