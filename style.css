@@ -93,10 +93,14 @@ body {
 }
 
 .bg-2,
-.bg-3,
-.bg-4,
-.bg-5 {
+.bg-4 {
   background-image: url("img/fundo-2.jpg");
+  background-position: center;
+}
+
+.bg-3,
+.bg-5 {
+  background-image: url("img/fundo-3.jpg");
   background-position: center;
 }
 
