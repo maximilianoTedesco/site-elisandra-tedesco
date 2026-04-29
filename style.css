@@ -44,13 +44,13 @@ body {
 .top-menu nav {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 8px;
 }
 
 .top-menu nav a {
   color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
-  font-size: 0.82rem;
+  font-size: 0.64rem;
   font-weight: 700;
   transition: color 0.3s ease;
 }
