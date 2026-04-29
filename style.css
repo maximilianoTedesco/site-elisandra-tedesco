@@ -14,6 +14,51 @@ body {
   color: #fff;
 }
 
+.top-menu {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  z-index: 20;
+  width: calc(100% - 32px);
+  max-width: 1120px;
+  transform: translateX(-50%);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 999px;
+  background: rgba(10, 10, 10, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.top-menu nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.top-menu nav a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.top-menu nav a:hover {
+  color: #fff;
+}
+
 .site {
   width: 100%;
   overflow-x: hidden;
@@ -323,4 +368,22 @@ p {
   .btn {
     width: 100%;
   }
+
+  .top-menu {
+  top: 10px;
+  width: calc(100% - 20px);
+  padding: 10px 14px;
+}
+
+.brand {
+  font-size: 0.78rem;
+}
+
+.top-menu nav {
+  gap: 10px;
+}
+
+.top-menu nav a {
+  font-size: 0.7rem;
+}
 }
