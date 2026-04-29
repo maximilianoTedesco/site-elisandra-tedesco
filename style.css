@@ -370,22 +370,22 @@ p {
   }
 
   .top-menu {
-  top: 10px;
-  width: calc(100% - 20px);
-  padding: 10px 14px;
-}
-
-.brand {
-  font-size: 0.78rem;
-}
-
-.top-menu nav {
-  gap: 10px;
-}
-
-.top-menu nav a {
-  font-size: 0.7rem;
-}
+    top: 10px;
+    width: calc(100% - 20px);
+    padding: 10px 12px;
+  }
+  
+  .brand {
+    font-size: 0.74rem;
+  }
+  
+  .top-menu nav {
+    gap: 6px;
+  }
+  
+  .top-menu nav a {
+    font-size: 0.6rem;
+  }
 }
 
 .footer {
@@ -421,4 +421,9 @@ p {
 
 .views {
   font-size: 0.82rem;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
