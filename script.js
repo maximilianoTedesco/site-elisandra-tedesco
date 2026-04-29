@@ -1,51 +1,77 @@
-const SUPABASE_URL = "https://ifwhsngotivshkzzmflu.supabase.co";
-const SUPABASE_KEY = "sb_publishable_-A-NxajIZ2IfxSD7jfzEtg_ieL3y87Q";
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".glass");
 
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
 
-// animação existente
-const cards = document.querySelectorAll(".glass");
+    cards.forEach(card => observer.observe(card));
+  } else {
+    cards.forEach(card => card.classList.add("show"));
+  }
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.18 }
-);
+  atualizarContador();
+});
 
-cards.forEach(card => observer.observe(card));
+const SUPABASE_URL = "COLE_AQUI_SUA_URL";
+const SUPABASE_KEY = "COLE_AQUI_SUA_KEY";
 
-// CONTADOR DE VISUALIZAÇÕES
 async function atualizarContador() {
-  const { data, error } = await supabase
-    .from("views")
-    .select("total")
-    .eq("id", 1)
-    .single();
+  const contador = document.getElementById("viewCounter");
 
-  if (error) {
-    console.error("Erro ao buscar:", error);
+  if (!contador) return;
+
+  if (
+    !SUPABASE_URL ||
+    !SUPABASE_KEY ||
+    SUPABASE_URL.includes("COLE_AQUI") ||
+    SUPABASE_KEY.includes("COLE_AQUI") ||
+    !window.supabase
+  ) {
+    contador.textContent = "351";
     return;
   }
 
-  const totalAtual = data.total + 1;
+  try {
+    const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-  const { error: updateError } = await supabase
-    .from("views")
-    .update({ total: totalAtual })
-    .eq("id", 1);
+    const { data, error } = await supabaseClient
+      .from("views")
+      .select("total")
+      .eq("id", 1)
+      .single();
 
-  if (updateError) {
-    console.error("Erro ao atualizar:", updateError);
-    return;
+    if (error || !data) {
+      console.error("Erro ao buscar contador:", error);
+      contador.textContent = "351";
+      return;
+    }
+
+    const novoTotal = Number(data.total) + 1;
+
+    const { error: updateError } = await supabaseClient
+      .from("views")
+      .update({ total: novoTotal })
+      .eq("id", 1);
+
+    if (updateError) {
+      console.error("Erro ao atualizar contador:", updateError);
+      contador.textContent = data.total;
+      return;
+    }
+
+    contador.textContent = novoTotal;
+  } catch (erro) {
+    console.error("Erro geral no contador:", erro);
+    contador.textContent = "351";
   }
-
-  document.getElementById("viewCounter").textContent = totalAtual;
 }
-
-atualizarContador();
